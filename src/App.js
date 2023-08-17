@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+const faqs = [
+  {
+    title: "How many team members can I invite?",
+    text: "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.",
+  },
+  {
+    title: "What is the maximum file upload size?",
+    text: "No more than 2GB. All files in your account must fit your allotted storage space.",
+  },
+  {
+    title: "How do I reset my password?",
+    text: "Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.",
+  },
+  {
+    title: "Can I cancel my subscription?",
+    text: "Yes! Send us a message and we’ll process your request no questions asked.",
+  },
+  {
+    title: "Do you provide additional support?",
+    text: "Chat and email support is available 24/7. Phone lines are open during normal business hours.",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Accordian data={faqs} />
     </div>
   );
+}
+
+function Accordian({ data }) {
+  // const [curOpen, setCurOpen] = useState(null);
 }
 
 export default App;
