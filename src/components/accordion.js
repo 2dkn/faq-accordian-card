@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "../components/faqs";
 
-function Accordion({ data }) {
+export default function Accordion({ data }) {
   const [curOpen, setCurOpen] = useState(null);
 
   return (
@@ -19,7 +18,7 @@ function Accordion({ data }) {
   );
 }
 
-function AccordionItem({ num, title, curOpen, onOpen, children }) {
+export default function AccordionItem({ num, title, curOpen, onOpen, children }) {
   const isOpen = num === curOpen;
 
   // function handleToggle() {
@@ -27,4 +26,4 @@ function AccordionItem({ num, title, curOpen, onOpen, children }) {
   // }
 }
 
-export default Accordian;
+

@@ -1,5 +1,5 @@
-import "./components/accordion";
-import "./components/faqs";
+import accordion from "../src/components/accordion";
+import faqs from "../src/components/faqs";
 import "./styles/main.scss";
 
 function App() {
