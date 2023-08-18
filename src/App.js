@@ -1,5 +1,6 @@
 import "./components/accordion";
 import "./components/faqs";
+import "./styles/main.scss";
 
 function App() {
   return (

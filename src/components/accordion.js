@@ -22,9 +22,9 @@ function Accordion({ data }) {
 function AccordionItem({ num, title, curOpen, onOpen, children }) {
   const isOpen = num === curOpen;
 
-  function handleToggle() {
-    onOpen(isOpen ? null : num);
-  }
+  // function handleToggle() {
+  //   onOpen(isOpen ? null : num);
+  // }
 }
 
 export default Accordian;
