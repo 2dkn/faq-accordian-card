@@ -1,4 +1,4 @@
-// import "./styles/main.scss";
+import "../src/dist/styles.css";
 
 function App() {
   const faqs = [
@@ -32,7 +32,11 @@ function App() {
   );
 }
 
-function Accordion({ data }) {}
+function Accordion({ data }) {
+  // const [open, setOpen] = useState(null);
+
+  return <div>{}</div>;
+}
 
 function AccordionItem({ data }) {}
 
