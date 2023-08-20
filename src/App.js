@@ -26,16 +26,21 @@ function App() {
 
   return (
     <div>
+      <Card />
       <Accordion data={faqs} />
       <AccordionItem />
     </div>
   );
 }
 
+function Card() {
+  return <div className="card"></div>;
+}
+
 function Accordion({ data }) {
   // const [open, setOpen] = useState(null);
 
-  return <div>{}</div>;
+  return <div></div>;
 }
 
 function AccordionItem({ data }) {}
