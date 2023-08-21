@@ -1,4 +1,5 @@
-import "../src/styles/main.scss";
+// import "../src/styles/main.scss"; // works on pc
+import "./styles/main.scss"; // works on mac
 
 function App() {
   const faqs = [
