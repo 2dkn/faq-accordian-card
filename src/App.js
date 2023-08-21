@@ -1,4 +1,4 @@
-import "../src/dist/styles.css";
+import "../src/styles/main.scss";
 
 function App() {
   const faqs = [
@@ -34,7 +34,7 @@ function App() {
 }
 
 function Card() {
-  return <div className="card"></div>;
+  return <div className="card">faqs</div>;
 }
 
 function Accordion({ data }) {
