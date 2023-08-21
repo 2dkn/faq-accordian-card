@@ -1,10 +1,40 @@
 @use "./variables";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  // background-color: variables.$softVoilet;
   background-color: variables.$softVoilet;
-  background-image: linear-gradient(
-    to top bottom,
-    variables.$softVoilet,
-    variables.$softBlue
-  );
+  background-image: linear-gradient(variables.$softVoilet, variables.$softBlue);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+  width: 95rem;
+  background-color: white;
+  border-radius: 2rem;
 }
