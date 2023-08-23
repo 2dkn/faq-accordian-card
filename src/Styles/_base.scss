@@ -29,13 +29,26 @@ body {
   background-repeat: no-repeat;
 }
 
-.card {
+.image,
+.accordion {
+  flex: 1;
+}
+
+.container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 50rem;
   width: 95rem;
   background-color: white;
   border-radius: 2rem;
   font-size: 20rem;
+  color: black;
+}
+
+.image {
+}
+
+.accordion {
+  margin-left: 10rem;
 }

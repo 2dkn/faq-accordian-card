@@ -35,7 +35,12 @@ function App() {
 }
 
 function Card() {
-  return <div className="card">faqs</div>;
+  return (
+    <div className="container">
+      <div className="image">image</div>
+      <div className="accordion">faq</div>
+    </div>
+  );
 }
 
 function Accordion({ data }) {
