@@ -1,5 +1,13 @@
 import "../src/styles/main.scss"; // works on pc
 // import "./styles/main.scss"; // works on mac
+import backgroundImage from "../src/images/bg-pattern-desktop.svg";
+import MobileImage from "../src/images/bg-pattern-mobile.svg";
+import iconImage from "../src/images/favicon-32x32.png";
+import arrowImage from "../src/images/icon-arrow-down.svg";
+import boxImage from "../src/images/illustration-box-desktop.svg";
+import womanImage from "../src/images/illustration-woman-online-desktop.svg";
+import womanMobileImage from "../src/images/illustration-woman-online-mobile.svg";
+import { useState } from "react";
 
 function App() {
   const faqs = [
@@ -28,27 +36,54 @@ function App() {
   return (
     <div>
       <Card />
-      <Accordion data={faqs} />
-      <AccordionItem />
+      <Accordion faqs={faqs} />
     </div>
   );
 }
 
-function Card() {
+function Card({ faqs }) {
   return (
     <div className="container">
-      <div className="image">image</div>
-      <div className="accordion">faq</div>
+      <div className="image">
+        <img
+          src={
+            (backgroundImage,
+            MobileImage,
+            iconImage,
+            arrowImage,
+            boxImage,
+            womanImage,
+            womanMobileImage)
+          }
+          alt=""
+        />
+      </div>
+      <div className="accordion"></div>
     </div>
   );
 }
 
-function Accordion({ data }) {
-  // const [open, setOpen] = useState(null);
+function Accordion({ faqs }) {
+  const [open, setOpen] = useState(null);
 
-  return <div></div>;
+  const toggleAccordion = (index) => {
+    if (index === open) {
+      setOpen(null);
+    } else {
+      setOpen(index);
+    }
+  };
+
+  return (
+    <div>
+      {faqs.map((faq, index) => (
+        <div key={faqs.index}>
+          <div onClick={() => toggleAccordion(open)}>{faq.title}</div>
+        </div>
+      ))}
+      ;
+    </div>
+  );
 }
-
-function AccordionItem({ data }) {}
 
 export default App;
