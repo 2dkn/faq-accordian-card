@@ -1,12 +1,14 @@
 import "../src/styles/main.scss"; // works on pc
 // import "./styles/main.scss"; // works on mac
-import backgroundImage from "../src/images/bg-pattern-desktop.svg";
-import MobileImage from "../src/images/bg-pattern-mobile.svg";
-import iconImage from "../src/images/favicon-32x32.png";
-import arrowImage from "../src/images/icon-arrow-down.svg";
-import boxImage from "../src/images/illustration-box-desktop.svg";
-import womanImage from "../src/images/illustration-woman-online-desktop.svg";
-import womanMobileImage from "../src/images/illustration-woman-online-mobile.svg";
+import {
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+} from "./images";
 import { useState } from "react";
 
 function App() {
@@ -55,18 +57,13 @@ function Card({ faqs, open, onToggle }) {
   return (
     <div className="container">
       <div className="image">
-        <img
-          src={
-            (backgroundImage,
-            MobileImage,
-            iconImage,
-            arrowImage,
-            boxImage,
-            womanImage,
-            womanMobileImage)
-          }
-          alt=""
-        />
+        <img src={image1} alt="" className="bg-pattern-desktop" />
+        <img src={image2} alt="" className="bg-pattern-mobile" />
+        <img src={image3} alt="" className="box" />
+        <img src={image4} alt="" className="arrow-down" />
+        <img src={image5} alt="" className="box" />
+        <img src={image6} alt="" className="woman" />
+        <img src={image7} alt="" className="woman-mobile" />
       </div>
       <div className="accordion">
         {faqs.map((faq, index) => (
@@ -80,6 +77,6 @@ function Card({ faqs, open, onToggle }) {
   );
 }
 
-function Accordion({ faqs, open, toggleAccordion }) {}
+function Accordion({ faqs, open, onToggle }) {}
 
 export default App;
