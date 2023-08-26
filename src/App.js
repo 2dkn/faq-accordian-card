@@ -10,6 +10,16 @@ import womanMobileImage from "../src/images/illustration-woman-online-mobile.svg
 import { useState } from "react";
 
 function App() {
+  const [open, setOpen] = useState(null);
+
+  const toggleAccordion = (index) => {
+    if (index === open) {
+      setOpen(null);
+    } else {
+      setOpen(index);
+    }
+  };
+
   const faqs = [
     {
       title: "How many team members can I invite?",
@@ -35,13 +45,13 @@ function App() {
 
   return (
     <div>
-      <Card />
-      <Accordion faqs={faqs} />
+      <Card open={open} faqs={faqs} onToggle={toggleAccordion} />
+      <Accordion open={open} faqs={faqs} />
     </div>
   );
 }
 
-function Card({ faqs }) {
+function Card({ faqs, open, onToggle }) {
   return (
     <div className="container">
       <div className="image">
@@ -58,32 +68,18 @@ function Card({ faqs }) {
           alt=""
         />
       </div>
-      <div className="accordion"></div>
+      <div className="accordion">
+        {faqs.map((faq, index) => (
+          <div key={index} className="accordion-text">
+            <div onClick={() => onToggle(index)}>{faq.title}</div>
+            {open === index && <div>{faq.text}</div>}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
-function Accordion({ faqs }) {
-  const [open, setOpen] = useState(null);
-
-  const toggleAccordion = (index) => {
-    if (index === open) {
-      setOpen(null);
-    } else {
-      setOpen(index);
-    }
-  };
-
-  return (
-    <div>
-      {faqs.map((faq, index) => (
-        <div key={faqs.index}>
-          <div onClick={() => toggleAccordion(open)}>{faq.title}</div>
-        </div>
-      ))}
-      ;
-    </div>
-  );
-}
+function Accordion({ faqs, open, toggleAccordion }) {}
 
 export default App;

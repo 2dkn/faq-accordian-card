@@ -49,7 +49,15 @@ body {
 }
 
 .accordion {
+  width: 100%;
   margin-left: 10rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.accordion-text {
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
