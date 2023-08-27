@@ -1,6 +1,44 @@
+.bg-pattern-desktop {
+  position: absolute;
+  height: 100rem;
+  width: 100rem;
+  padding-bottom: 4rem;
+  top: 7%;
+  left: -35%;
+  // z-index: -1;
+}
+
+.bg-pattern-mobile {
+  display: none;
+}
+
+.icon {
+  display: none;
+}
+
+.arrow-down {
+  display: none;
+}
+
 .box {
+  position: absolute;
   padding-left: 1rem;
+  left: 4%;
+  z-index: 1000;
 }
 .woman {
-  padding-bottom: rem;
+  position: absolute;
+  top: 35%;
+  right: 55%;
+  z-index: 102;
+}
+
+.woman-mobile {
+  display: none;
+}
+
+.container {
+  // position: relative;
+  // z-index: 1444;
+  box-shadow: 0rem 3rem 5rem 0rem rgba(0, 0, 0, 0.4);
 }
