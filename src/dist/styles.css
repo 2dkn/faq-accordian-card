@@ -24,6 +24,7 @@ body {
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   background-size: cover;
   background-repeat: no-repeat;
+  border: 3px solid #73ad21;
 }
 
 .image,
@@ -41,11 +42,8 @@ body {
   border-radius: 2rem;
   font-size: 20rem;
   color: black;
-}
-
-.image {
-  height: 2rem;
-  width: 2rem;
+  overflow: hidden;
+  position: relative;
 }
 
 .accordion {
@@ -60,12 +58,53 @@ body {
   padding-bottom: 2rem;
 }
 
+.bg-pattern-desktop {
+  position: absolute;
+  height: 100rem;
+  width: 100rem;
+  top: -30rem;
+  left: -61rem;
+  border: 3px solid #73ad21;
+  max-width: 106%;
+  transform: rotate(0deg);
+}
+
+.bg-pattern-mobile {
+  display: none;
+}
+
+.icon {
+  display: none;
+}
+
+.arrow-down {
+  display: none;
+}
+
 .box {
-  padding-left: 1rem;
+  position: absolute;
+  top: 20rem;
+  left: -3%;
+  border: 3px solid #73ad21;
+  z-index: 3;
+  transform: translateX(-50%);
 }
 
 .woman {
-  padding-bottom: rem;
+  position: absolute;
+  bottom: 6rem;
+  left: -9%;
+  border: 3px solid #73ad21;
+  z-index: 2;
+}
+
+.woman-mobile {
+  display: none;
+}
+
+.container {
+  box-shadow: 0rem 3rem 5rem 0rem rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

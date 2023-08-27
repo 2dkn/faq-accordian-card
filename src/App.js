@@ -61,7 +61,7 @@ function Card({ faqs, open, onToggle }) {
         <img src={image2} alt="" className="bg-pattern-mobile" />
         <img src={image3} alt="" className="icon" />
         <img src={image4} alt="" className="arrow-down" />
-        <img src={image5} alt="" className="box" />
+        <img src={image5} alt="" className="box" />;
         <img src={image6} alt="" className="woman" />
         <img src={image7} alt="" className="woman-mobile" />
       </div>
