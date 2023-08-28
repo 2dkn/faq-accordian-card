@@ -1,3 +1,27 @@
+.title {
+  font-size: 4rem;
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+.accordion {
+  width: 100%;
+  margin-left: 10rem;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-right: 4rem;
+}
+
+.accordion-text {
+  font-family: "Kumbh Sans";
+}
+
+.accordion-text {
+  font-size: 2rem;
+  padding-bottom: 4rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -40,22 +64,13 @@ body {
   width: 95rem;
   background-color: white;
   border-radius: 2rem;
-  font-size: 20rem;
   color: black;
   overflow: hidden;
   position: relative;
 }
 
-.accordion {
-  width: 100%;
-  margin-left: 10rem;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
 .accordion-text {
-  font-size: 2.5rem;
-  padding-bottom: 2rem;
+  font-family: "Kumbh Sans";
 }
 
 .bg-pattern-desktop {
@@ -82,12 +97,13 @@ body {
 }
 
 .box {
+  display: block;
   position: absolute;
   top: 20rem;
   left: -3%;
   border: 3px solid #73ad21;
-  z-index: 3;
-  transform: translateX(-50%);
+  z-index: 5;
+  transform: translateX(-45%);
 }
 
 .woman {
@@ -96,6 +112,7 @@ body {
   left: -9%;
   border: 3px solid #73ad21;
   z-index: 2;
+  overflow: hidden;
 }
 
 .woman-mobile {

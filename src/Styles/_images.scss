@@ -2,10 +2,18 @@
   position: absolute;
   height: 100rem;
   width: 100rem;
-  padding-bottom: 4rem;
-  top: 7%;
-  left: -35%;
-  // z-index: -1;
+  top: -30rem;
+  // bottom: 20rem;
+  left: -61rem;
+  border: 3px solid #73ad21;
+  max-width: 106%;
+  transform: rotate(0deg);
+
+  // height: 60rem;
+  // width: 60rem;
+  // top: 26rem;
+  // left: -34%;
+  // border: 3px solid #73ad21;
 }
 
 .bg-pattern-mobile {
@@ -21,16 +29,22 @@
 }
 
 .box {
+  display: block;
   position: absolute;
-  padding-left: 1rem;
-  left: 4%;
-  z-index: 1000;
+  top: 20rem;
+  left: -3%;
+  border: 3px solid #73ad21;
+  z-index: 5;
+  transform: translateX(-45%);
 }
 .woman {
   position: absolute;
-  top: 35%;
-  right: 55%;
-  z-index: 102;
+  bottom: 6rem;
+  // bottom: 233%;
+  left: -9%;
+  border: 3px solid #73ad21;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .woman-mobile {
@@ -38,7 +52,10 @@
 }
 
 .container {
-  // position: relative;
-  // z-index: 1444;
   box-shadow: 0rem 3rem 5rem 0rem rgba(0, 0, 0, 0.4);
+  // border: 3px solid #73ad21;
+  z-index: 1;
+}
+
+.image {
 }

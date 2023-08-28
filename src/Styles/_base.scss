@@ -17,16 +17,19 @@ html {
 }
 
 body {
+  // position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  // min-width: 100vh;
   margin: 0;
   // background-color: variables.$softVoilet;
   background-color: variables.$softVoilet;
   background-image: linear-gradient(variables.$softVoilet, variables.$softBlue);
   background-size: cover;
   background-repeat: no-repeat;
+  border: 3px solid #73ad21;
 }
 
 .image,
@@ -42,24 +45,7 @@ body {
   width: 95rem;
   background-color: white;
   border-radius: 2rem;
-  font-size: 20rem;
   color: black;
-  z-index: 100;
-}
-
-.image {
-  height: 2rem;
-  width: 2rem;
-}
-
-.accordion {
-  width: 100%;
-  margin-left: 10rem;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.accordion-text {
-  font-size: 2.5rem;
-  padding-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
 }

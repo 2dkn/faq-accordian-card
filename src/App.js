@@ -66,10 +66,13 @@ function Card({ faqs, open, onToggle }) {
         <img src={image7} alt="" className="woman-mobile" />
       </div>
       <div className="accordion">
+        <h1 className="title">FAQ</h1>
         {faqs.map((faq, index) => (
           <div key={index} className="accordion-text">
-            <div onClick={() => onToggle(index)}>{faq.title}</div>
-            {open === index && <div>{faq.text}</div>}
+            <div onClick={() => onToggle(index)} className="accordion-title">
+              {faq.title}
+            </div>
+            {open === index && <div className="accordion-text">{faq.text}</div>}
           </div>
         ))}
       </div>
