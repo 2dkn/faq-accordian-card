@@ -1,4 +1,4 @@
-@use "./variables";
+@use "variables" as *;
 
 * {
   margin: 0;
@@ -17,16 +17,13 @@ html {
 }
 
 body {
-  // position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  // min-width: 100vh;
+  height: 100vh;
   margin: 0;
-  // background-color: variables.$softVoilet;
-  background-color: variables.$softVoilet;
-  background-image: linear-gradient(variables.$softVoilet, variables.$softBlue);
+  background-color: $softVoilet;
+  background-image: linear-gradient($softVoilet, $softBlue);
   background-size: cover;
   background-repeat: no-repeat;
   border: 3px solid #73ad21;
@@ -48,4 +45,93 @@ body {
   color: black;
   overflow: hidden;
   position: relative;
+}
+
+.title {
+  font-size: 4rem;
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+.accordion {
+  width: 100%;
+  margin-left: 10rem;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-right: 4rem;
+}
+
+.accordion-text {
+  max-height: 15rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  font-family: "Kumbh Sans";
+  font-size: 2rem;
+  background-color: #ffffff;
+  padding: 0;
+  padding-bottom: 0;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.bg-pattern-desktop {
+  position: absolute;
+  height: 100rem;
+  width: 100rem;
+  top: -30rem;
+  // bottom: 20rem;
+  left: -61rem;
+  border: 3px solid #73ad21;
+  max-width: 106%;
+  transform: rotate(0deg);
+
+  // height: 60rem;
+  // width: 60rem;
+  // top: 26rem;
+  // left: -34%;
+  // border: 3px solid #73ad21;
+}
+
+.bg-pattern-mobile {
+  display: none;
+}
+
+.icon {
+  display: none;
+}
+
+.arrow-down {
+  display: none;
+}
+
+.box {
+  display: block;
+  position: absolute;
+  top: 20rem;
+  left: -3%;
+  border: 3px solid #73ad21;
+  z-index: 5;
+  transform: translateX(-45%);
+}
+.woman {
+  position: absolute;
+  bottom: 6rem;
+  // bottom: 233%;
+  left: -9%;
+  border: 3px solid #73ad21;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.woman-mobile {
+  display: none;
+}
+
+.container {
+  box-shadow: 0rem 3rem 5rem 0rem rgba(0, 0, 0, 0.4);
+  // border: 3px solid #73ad21;
+  z-index: 1;
+}
+
+.image {
 }
