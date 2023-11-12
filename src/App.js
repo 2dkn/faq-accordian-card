@@ -47,7 +47,6 @@ function App() {
   return (
     <div>
       <Card open={open} faqs={faqs} onToggle={toggleAccordion} />
-      <Accordion open={open} faqs={faqs} />
     </div>
   );
 }
@@ -55,13 +54,15 @@ function App() {
 function Card({ faqs, open, onToggle }) {
   return (
     <div className="container">
-      <img src={image1} alt="" className="bg-pattern-desktop" />
-      <img src={image2} alt="" className="bg-pattern-mobile" />
-      <img src={image3} alt="" className="icon" />
-      <img src={image4} alt="" className="arrow-down" />
-      <img src={image5} alt="" className="box" />;
-      <img src={image6} alt="" className="woman" />
-      <img src={image7} alt="" className="woman-mobile" />
+      <div className="images">
+        <img src={image1} alt="" className="bg-pattern-desktop" />
+        <img src={image2} alt="" className="bg-pattern-mobile" />
+        <img src={image3} alt="" className="icon" />
+        <img src={image4} alt="" className="arrow-down" />
+        <img src={image5} alt="" className="box" />
+        <img src={image6} alt="" className="woman" />
+        <img src={image7} alt="" className="woman-mobile" />
+      </div>
       <div className="accordion">
         <h1 className="title">FAQ</h1>
         {faqs.map((faq, index) => (
@@ -77,5 +78,4 @@ function Card({ faqs, open, onToggle }) {
   );
 }
 
-function Accordion({ faqs, open, onToggle }) {}
 export default App;
