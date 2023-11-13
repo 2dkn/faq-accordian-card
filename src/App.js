@@ -45,9 +45,20 @@ function App() {
   ];
 
   return (
-    <div>
+    <>
       <Card open={open} faqs={faqs} onToggle={toggleAccordion} />
-    </div>
+      <div class="footer">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Frontend Mentor
+        </a>
+        . Coded by <a href="https://github.com/2dkn">Kevin Neely</a>
+      </div>
+    </>
   );
 }
 
@@ -66,7 +77,10 @@ function Card({ faqs, open, onToggle }) {
       <div className="accordion">
         <h1 className="title">FAQ</h1>
         {faqs.map((faq, index) => (
-          <div key={index} className="accordion-text">
+          <div
+            key={index}
+            className={`accordion-text ${open === index ? "open" : ""}`}
+          >
             <div onClick={() => onToggle(index)} className="accordion-title">
               {faq.title}
             </div>
