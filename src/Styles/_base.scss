@@ -56,7 +56,7 @@ body {
   font-size: 4rem;
   font-family: "Kumbh Sans";
   font-weight: 700;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   margin-top: 6rem;
 }
 
@@ -69,11 +69,16 @@ body {
 }
 
 .accordion-title {
+  font-size: 1.5rem;
   color: $grayBlueDark;
 }
 
 .accordion-title:hover {
   color: $lightRed;
+}
+
+.bold-text {
+  font-weight: bold;
 }
 
 .accordion-text {
@@ -83,12 +88,12 @@ body {
   font-size: 2rem;
   background-color: #ffffff;
   padding: 0;
-  padding-bottom: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
   cursor: pointer;
   transition: max-height 0.3s ease-in-out;
-  color: $grayBlueDark;
+  color: $grayBlueLight;
 }
 
 .accordion-text.open {

@@ -12,6 +12,7 @@ import { useState } from "react";
 
 function App() {
   const [open, setOpen] = useState(null);
+  const [boldTitleIndex, setBoldTitleIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     if (index === open) {
@@ -19,6 +20,11 @@ function App() {
     } else {
       setOpen(index);
     }
+  };
+
+  const handleTitleClick = (index) => {
+    setBoldTitleIndex(index === boldTitleIndex ? null : index);
+    toggleAccordion(index); // Update the 'open' state
   };
 
   const faqs = [
@@ -46,7 +52,13 @@ function App() {
 
   return (
     <>
-      <Card open={open} faqs={faqs} onToggle={toggleAccordion} />
+      <Card
+        open={open}
+        faqs={faqs}
+        onToggle={toggleAccordion}
+        boldTitleIndex={boldTitleIndex}
+        handleTitleClick={handleTitleClick}
+      />
       <div class="footer">
         Challenge by
         <a
@@ -62,7 +74,7 @@ function App() {
   );
 }
 
-function Card({ faqs, open, onToggle }) {
+function Card({ faqs, open, onToggle, boldTitleIndex, handleTitleClick }) {
   return (
     <div className="container">
       <div className="images">
@@ -81,10 +93,16 @@ function Card({ faqs, open, onToggle }) {
             key={index}
             className={`accordion-text ${open === index ? "open" : ""}`}
           >
-            <div onClick={() => onToggle(index)} className="accordion-title">
+            <div
+              onClick={() => handleTitleClick(index)}
+              className={`accordion-title ${
+                boldTitleIndex === index ? "bold-text" : ""
+              }`}
+            >
               {faq.title}
             </div>
             {open === index && <div className="accordion-text">{faq.text}</div>}
+            <hr />
           </div>
         ))}
       </div>
