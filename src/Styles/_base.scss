@@ -33,12 +33,9 @@ body {
   align-items: center;
   height: 52rem;
   width: 95rem;
-  // width: 100%;
-  // max-width: 95rem;
   background-color: white;
   border-radius: 2rem;
   color: black;
-  // overflow: hidden;
   background-image: url(../images/bg-pattern-desktop.svg);
   background-position: -57rem -29rem;
   background-repeat: no-repeat;
@@ -53,22 +50,25 @@ body {
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: "Kumbh Sans";
   font-weight: 700;
   margin-bottom: 3rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .accordion {
   max-width: 45rem;
-  margin-right: 3rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  padding-right: 8rem;
   height: 52rem;
 }
 
 .accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 1.5rem;
   color: $grayBlueDark;
 }
@@ -82,15 +82,15 @@ body {
 }
 
 .accordion-text {
-  max-height: 5rem;
-  overflow: hidden;
+  max-height: 6rem;
+  overflow: visible;
   font-family: "Kumbh Sans";
-  font-size: 2rem;
   background-color: #ffffff;
-  padding: 0;
   font-size: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  margin-right: 0.5rem;
   cursor: pointer;
   transition: max-height 0.3s ease-in-out;
   color: $grayBlueLight;
@@ -99,6 +99,11 @@ body {
 .accordion-text.open {
   max-height: 40rem;
   transition: max-height 0.3s ease-in-out;
+}
+
+.border {
+  margin-top: 1.5rem;
+  border: 1px solid $lightGray;
 }
 
 .images {
@@ -118,8 +123,12 @@ body {
   display: none;
 }
 
-.arrow-down {
-  display: none;
+.arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
 }
 
 .damn-box {
@@ -128,17 +137,17 @@ body {
 
 .box {
   position: absolute;
-  left: -2rem;
-  top: 11rem;
+  left: -3rem;
+  top: 13em;
   transform: translateX(-45%);
 }
 .woman {
   width: 100%;
   position: relative;
-  top: -2rem;
-  right: 8rem;
+  top: -1rem;
+  right: 10rem;
   z-index: -11;
-  clip-path: inset(0 0 0 8rem);
+  clip-path: inset(0 0 0 10rem);
 }
 
 .woman-mobile {
