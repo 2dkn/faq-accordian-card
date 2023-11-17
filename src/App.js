@@ -24,7 +24,7 @@ function App() {
 
   const handleTitleClick = (index) => {
     setBoldTitleIndex(index === boldTitleIndex ? null : index);
-    toggleAccordion(index); // Update the 'open' state
+    toggleAccordion(index);
   };
 
   const faqs = [

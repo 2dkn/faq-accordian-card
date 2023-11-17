@@ -22,6 +22,8 @@ body {
   height: 100vh;
   margin: 0;
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container {
@@ -30,12 +32,13 @@ body {
   flex-direction: row;
   align-items: center;
   height: 52rem;
-  width: 95rem;
+  max-width: 91rem;
+  width: 100%;
   background-color: white;
   border-radius: 2rem;
   color: black;
   background-image: url(../images/bg-pattern-desktop.svg);
-  background-position: -57rem -29rem;
+  background-position: -59rem -29rem;
   background-repeat: no-repeat;
   position: relative;
   box-shadow: 0rem 2rem 4rem 0rem rgba(0, 0, 0, 0.249);
@@ -129,14 +132,10 @@ body {
   transform: rotate(180deg);
 }
 
-.damn-box {
-  position: relative;
-}
-
 .box {
   position: absolute;
-  left: -3rem;
-  top: 13em;
+  left: -2rem;
+  top: 11em;
   transform: translateX(-45%);
 }
 
@@ -144,9 +143,9 @@ body {
   width: 100%;
   position: relative;
   top: -1rem;
-  right: 10rem;
+  right: 8rem;
   z-index: -11;
-  clip-path: inset(0 0 0 10rem);
+  clip-path: inset(0 0 0 8rem);
 }
 
 .woman-mobile {
@@ -172,6 +171,47 @@ body {
 
 .footer a:hover {
   color: hsl(14, 88%, 65%);
+}
+
+@media screen and (max-width: 46.125em) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/bg-pattern-mobile.svg);
+    background-position: 8rem 0rem;
+    max-width: 40rem;
+    height: 58rem;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0rem;
+  }
+  .accordion {
+    width: 100%;
+    max-width: 50rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-bottom: 5rem;
+    padding-top: 0rem;
+  }
+  .box {
+    display: none;
+  }
+  .woman {
+    display: none;
+  }
+  .woman-mobile {
+    display: flex;
+    width: 25rem;
+    position: absolute;
+    top: -12rem;
+    right: 15rem;
+  }
+  .footer {
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

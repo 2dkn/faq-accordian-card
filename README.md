@@ -30,7 +30,7 @@ Users should be able to:
 ### Built With
 
 - SCSS
-- React
+- React.js with hooks
 - Flex Layout
 
 ## Author
