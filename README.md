@@ -22,6 +22,8 @@ Users should be able to:
 
 ### Screenshot
 
+![Design preview for the Faq Accordion Card coding challenge](/Designs/screenshotfac.png)
+
 ### Links
 
 - Solution URL: [Solution Site]()
