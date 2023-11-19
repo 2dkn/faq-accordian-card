@@ -178,6 +178,12 @@ body {
 //Media Queries
 
 @media screen and (max-width: 46.125em) {
+  body {
+    min-width: 40em;
+    height: 90vh;
+    // overflow-x: hidden;
+  }
+
   .container {
     display: flex;
     flex-direction: column;

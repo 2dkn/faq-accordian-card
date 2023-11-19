@@ -26,14 +26,15 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution Site]()
-- Live Site URL: [Live Site]()
+- Solution URL: [Solution Site](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam/hub)
+- Live Site URL: [Live Site](https://faq-accordion-card-2dkn.netlify.app/)
 
 ### Built With
 
 - SCSS
 - React.js with hooks
 - Flex Layout
+- Responsive Design
 
 ## Author
 
